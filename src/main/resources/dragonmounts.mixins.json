@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.zestyblaze.dragonmounts.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ClientPacketListenerMixin",
+    "EnsureSafeFlyingVehicleMixin",
+    "ModelManagerAccessor",
+    "ReplenishDragonEggMixin"
+  ],
+  "client": [
+    "client.ModelPartMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

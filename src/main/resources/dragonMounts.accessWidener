@@ -1,0 +1,8 @@
+accessWidener v2 named
+accessible method net/minecraft/tags/BlockTags create (Ljava/lang/String;)Lnet/minecraft/tags/TagKey;
+accessible field net/minecraft/world/entity/LivingEntity jumping Z
+accessible field net/minecraft/client/resources/model/ModelManager bakedRegistry Ljava/util/Map;
+accessible field net/minecraft/client/resources/model/ModelManager missingModel Lnet/minecraft/client/resources/model/BakedModel;
+accessible method net/minecraft/client/renderer/RenderType create (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;ILnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+accessible method net/minecraft/client/renderer/RenderType create (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+accessible method net/minecraft/client/Camera move (DDD)V

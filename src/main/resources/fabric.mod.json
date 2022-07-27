@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "dragonmounts",
+  "version": "${version}",
+
+  "name": "Dragon Mounts - Legacy",
+  "description": "The Legacy of the Original Dragon Mounts lives on!",
+  "authors": [
+    "ZestyBlaze"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "",
+    "issues": ""
+  },
+
+  "license": "MIT License",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.zestyblaze.dragonmounts.DragonMountsLegacy"
+    ],
+    "client": [
+      "net.zestyblaze.dragonmounts.DMLClient"
+    ],
+    "modmenu": [
+      "net.zestyblaze.dragonmounts.integration.ModMenu"
+    ]
+  },
+  "mixins": [
+    "dragonmounts.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "accessWidener": "dragonMounts.accessWidener"
+}
