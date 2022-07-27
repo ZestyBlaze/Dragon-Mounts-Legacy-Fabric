@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
@@ -21,6 +22,7 @@ import net.zestyblaze.dragonmounts.client.DragonRenderer;
 import net.zestyblaze.dragonmounts.client.EggEntityRenderer;
 import net.zestyblaze.dragonmounts.data.BreedManager;
 import net.zestyblaze.dragonmounts.dragon.DragonSpawnEgg;
+import net.zestyblaze.dragonmounts.network.UpdateBreedsPacket;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.function.BooleanSupplier;
@@ -66,5 +68,10 @@ public class DMLClient implements ClientModInitializer {
         EntityRendererRegistry.register(DMLRegistry.DRAGON, DragonRenderer::new);
         EntityRendererRegistry.register(DMLRegistry.DRAGON_EGG, EggEntityRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(DragonRenderer.LAYER_LOCATION, DragonModel::createBodyLayer);
+
+        ClientPlayNetworking.registerGlobalReceiver(UpdateBreedsPacket.PACKET_ID, (client, handler, buf, responseSender) -> {
+            UpdateBreedsPacket packet = new UpdateBreedsPacket(buf);
+            packet.handle(client);
+        });
     }
 }

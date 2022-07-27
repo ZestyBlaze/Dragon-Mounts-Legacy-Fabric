@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.zestyblaze.dragonmounts.dragon.DMLEggBlock;
 import net.zestyblaze.dragonmounts.dragon.TameableDragon;
+import net.zestyblaze.dragonmounts.network.UpdateBreedsPacket;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -53,5 +54,7 @@ public class DragonMountsLegacy implements ModInitializer {
 		DMLRegistry.registerSounds();
 		DMLRegistry.registerAttributes();
 		attemptVanillaEggReplacement();
+
+		UpdateBreedsPacket.init();
 	}
 }
