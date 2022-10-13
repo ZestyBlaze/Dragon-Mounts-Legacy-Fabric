@@ -1,0 +1,5 @@
+// 1.19.2	2022-10-13T16:09:16.3030042	Tags for minecraft:block
+cd5261f0bd971d239e43fb25dc3b1da215ffe5f9 data\dragonmounts\tags\blocks\forest_dragon_habitat_blocks.json
+9396581f68c39ecfa854d4d375dc41634cdda704 data\dragonmounts\tags\blocks\fire_dragon_habitat_blocks.json
+4a64b4a13e3f14c91b38032cf713f3ea3e2bab30 data\dragonmounts\tags\blocks\ice_dragon_habitat_blocks.json
+b3888537dcbea2f46d58140f7fdbccb8f46216b0 data\dragonmounts\tags\blocks\nether_dragon_habitat_blocks.json

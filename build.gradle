@@ -25,6 +25,10 @@ repositories {
 		name "Parchment"
 		url "https://maven.parchmentmc.org"
 	}
+
+	maven { url = "https://mvn.devos.one/snapshots/" }
+
+	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -45,6 +49,8 @@ dependencies {
 	//Modmenu
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}") {
 		exclude group: "net.fabricmc.fabric-api" }
+
+	modImplementation(include("io.github.fabricators_of_create.Porting-Lib:porting-lib:2.0.564+1.19.2"))
 }
 
 processResources {
@@ -71,6 +77,28 @@ jar {
 
 loom {
 	accessWidenerPath = file("src/main/resources/dragonMounts.accessWidener")
+
+	runs {
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.strict-validation"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
+	}
 }
 
 publishing {

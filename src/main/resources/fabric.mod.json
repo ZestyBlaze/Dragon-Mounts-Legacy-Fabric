@@ -20,13 +20,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.zestyblaze.dragonmounts.DragonMountsLegacy"
+      "com.kay9.dragonmounts.DragonMountsLegacy"
     ],
     "client": [
-      "net.zestyblaze.dragonmounts.DMLClient"
+      "com.kay9.dragonmounts.DMLClient"
     ],
-    "modmenu": [
-      "net.zestyblaze.dragonmounts.integration.ModMenu"
+    "fabric-datagen": [
+      "com.kay9.dragonmounts.DMLDataGen"
     ]
   },
   "mixins": [

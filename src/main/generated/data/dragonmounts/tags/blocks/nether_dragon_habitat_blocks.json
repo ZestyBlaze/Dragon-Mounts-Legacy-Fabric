@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:soul_fire_base_blocks",
+      "required": false
+    },
+    "minecraft:blackstone",
+    "minecraft:basalt",
+    "minecraft:soul_fire",
+    "minecraft:soul_campfire"
+  ]
+}
